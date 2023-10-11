@@ -1,12 +1,13 @@
 import { observer } from "mobx-react-lite"
 import React, { FC } from "react"
-import { Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
+import { Button, Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
 import {
   Text,
 } from "../components"
 import { isRTL } from "../i18n"
 import { colors, spacing } from "../theme"
 import { useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
+import { AppStackScreenProps } from "app/navigators"
 
 const welcomeLogo = require("../../assets/images/logo.png")
 const welcomeFace = require("../../assets/images/welcome-face.png")
@@ -33,6 +34,28 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
       </View>
 
       <View style={[$bottomContainer, $bottomContainerInsets]}>
+      <Button
+          title="Sign Up"
+          onPress={() => navigation.navigate('SignUp')}
+        />
+        <Button
+          title="Log In"
+          onPress={() => navigation.navigate('LogIn')}
+        />
+        <Button
+          title="Forgot Password"
+          onPress={() => navigation.navigate('ForgotPassword')}
+        />
+        <Button
+          title="Verify Account"
+          onPress={() => navigation.navigate('VerifyAccount')}
+        />
+        <Button
+          title="Launch"
+          onPress={() => navigation.navigate('Launch')}
+        />
+       
+
         <Text tx="welcomeScreen.postscript" size="md" />
       </View>
     </View>

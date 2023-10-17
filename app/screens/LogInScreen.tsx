@@ -15,7 +15,6 @@ export const LogInScreen: FC<LogInScreenProps> = observer(function LogInScreen()
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Sign In</Text>
-
       <Input
         style={styles.input}
         values={email}
@@ -34,49 +33,46 @@ export const LogInScreen: FC<LogInScreenProps> = observer(function LogInScreen()
         secureTextEntry={true}
         label="Password"
       />
-
       <Text style={styles.forgotPassword}>Forgot Password?</Text>
-
       <Button style={styles.button} variant="solid" bgColor="$purple300" onPress={() => { /* Handle Sign In */ }}>
         <Text> Sign In</Text>
       </Button>
-
       <Text style={styles.footerText}>Don't have an account? <Text style={styles.linkText}>Sign up</Text></Text>
     </View>
   );
 })
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    justifyContent: 'center',
-    backgroundColor: '#7B4FDB',
-  },
-  title: {
-    fontSize: 24,
-    color: '#FFF',
-    marginBottom: 20,
-    alignSelf: 'center',
-  },
-  input: {
-    marginBottom: 20,
-  },
-  forgotPassword: {
-    color: '#FFF',
-    alignSelf: 'flex-end',
-    marginBottom: 20,
-  },
   button: {
-    width: '100%',
     marginBottom: 10,
+    width: '100%',
+  },
+  container: {
+    backgroundColor: '#7B4FDB',
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
   },
   footerText: {
     color: '#FFF',
     marginTop: 20,
     textAlign: 'center',
   },
+  forgotPassword: {
+    alignSelf: 'flex-end',
+    color: '#FFF',
+    marginBottom: 20,
+  },
+  input: {
+    marginBottom: 20,
+  },
   linkText: {
     textDecorationLine: 'underline',
+  },
+  title: {
+    alignSelf: 'center',
+    color: '#FFF',
+    fontSize: 24,
+    marginBottom: 20,
   },
 });

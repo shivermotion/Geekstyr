@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite"
 import React, { FC } from "react"
 import { Button, Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
-import {Text} from "../components"
+import { Text } from "../components"
 import { isRTL } from "../i18n"
 import { colors, spacing } from "../theme"
 import { useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
@@ -12,12 +12,12 @@ import { useNavigation } from '@react-navigation/native';
 const welcomeLogo = require("../../assets/images/logo.png")
 const welcomeFace = require("../../assets/images/welcome-face.png")
 
-interface WelcomeScreenProps extends AppStackScreenProps<"Welcome"> {}
+interface WelcomeScreenProps extends AppStackScreenProps<"Welcome"> { }
 
 export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeScreen(
 ) {
 
-const navigation = useNavigation();
+  const navigation = useNavigation();
   const $bottomContainerInsets = useSafeAreaInsetsStyle(["bottom"])
 
   return (
@@ -35,7 +35,11 @@ const navigation = useNavigation();
       </View>
 
       <View style={[$bottomContainer, $bottomContainerInsets]}>
-      <Button
+        <Button
+          title="Launch"
+          onPress={() => navigation.navigate('Launch')}
+        />
+        <Button
           title="Sign Up"
           onPress={() => navigation.navigate('SignUp')}
         />
@@ -52,10 +56,10 @@ const navigation = useNavigation();
           onPress={() => navigation.navigate('VerifyAccount')}
         />
         <Button
-          title="Launch"
-          onPress={() => navigation.navigate('Launch')}
+          title="Match!"
+          onPress={() => navigation.navigate('MatchScreen')}
         />
-       
+
 
         <Text tx="welcomeScreen.postscript" size="md" />
       </View>

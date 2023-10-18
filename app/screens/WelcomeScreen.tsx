@@ -54,6 +54,18 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
           onPress={() => navigation.navigate('Match')}
         />
         </Box>
+      <Box p={"$5"}>
+        <Button
+          title="Avatar Creator"
+          onPress={() => navigation.navigate('AvatarCreator')}
+        />
+        </Box>
+      <Box p={"$5"}>
+        <Button
+          title="Avatar Viewer"
+          onPress={() => navigation.navigate('AvatarViewer')}
+        />
+        </Box>
 
 
    

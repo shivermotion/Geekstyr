@@ -98,7 +98,7 @@ function App(props: AppProps) {
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <ErrorBoundary catchErrors={Config.catchErrors}>
-      <GluestackUIProvider config={config}>
+        <GluestackUIProvider config={config}>
             <AppNavigator
               linking={linking}
               initialState={initialNavigationState}
@@ -106,7 +106,7 @@ function App(props: AppProps) {
           />
           </GluestackUIProvider>
       </ErrorBoundary>
-    </SafeAreaProvider>
+  </SafeAreaProvider>
   )
 }
 

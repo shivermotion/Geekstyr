@@ -1,7 +1,7 @@
 import React, { FC } from "react"
-import { StyleSheet, ImageBackground } from "react-native"
+import { StyleSheet } from "react-native"
 import { observer } from "mobx-react-lite"
-import { Button, View, Text, Image, Center } from "@gluestack-ui/themed"
+import { Button, View, Text, Image } from "@gluestack-ui/themed"
 import ConfettiCannon from 'react-native-confetti-cannon';
 // Import other required components or utilities
 

@@ -2,9 +2,8 @@ import React, { FC, useState } from "react"
 import { observer } from "mobx-react-lite"
 import { StyleSheet } from "react-native"
 import { AppStackScreenProps } from "app/navigators"
-import { Button, View, Image, Text, Input, InputField } from "@gluestack-ui/themed"
-// import { useNavigation } from "@react-navigation/native"
-// import { useStores } from "app/models"
+import { Button, View,  Text, Input, InputField } from "@gluestack-ui/themed"
+
 
 interface LogInScreenProps extends AppStackScreenProps<"LogIn"> { }
 

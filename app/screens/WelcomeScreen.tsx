@@ -4,7 +4,8 @@ import { Button,  View, ViewStyle } from "react-native"
 import { colors } from "../theme"
 import { AppStackScreenProps } from "app/navigators"
 import { useNavigation } from '@react-navigation/native';
-import { Box } from "@gluestack-ui/themed"
+import { Box, ScrollView } from "@gluestack-ui/themed"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 
 
 interface WelcomeScreenProps extends AppStackScreenProps<"Welcome"> { }
@@ -15,9 +16,9 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
   const navigation = useNavigation();
 
   return (
-    <View style={$container}>
 
-<Box p={"$5"} marginTop={"$20"}>
+    <ScrollView style={$container}>
+      <Box p={"$5"} marginTop={"$20"}>
         <Button
           title="Launch"
           onPress={() => navigation.navigate('Launch')}
@@ -78,15 +79,21 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
           onPress={() => navigation.navigate('Messenger')}
         />
         </Box>
-
-
-   
-    </View>
+      <Box p={"$5"}>
+        <Button
+          title="Profile"
+          onPress={() => navigation.navigate('Profile')}
+        />
+        </Box>
+      </ScrollView>
+     
   )
 })
 
 const $container: ViewStyle = {
   flex: 1,
+  padding: 10,
+  margin: 20,
   backgroundColor: colors.background,
 }
 

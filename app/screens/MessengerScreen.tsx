@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native"
 import { observer } from "mobx-react-lite"
 import { Chat, MessageType } from '@flyerhq/react-native-chat-ui'
 import { View } from "@gluestack-ui/themed"
-import { SafeAreaProvider } from "react-native-safe-area-context"
+// import { SafeAreaProvider } from "react-native-safe-area-context"
 
 
 interface MessengerScreenProps {

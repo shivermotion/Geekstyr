@@ -68,6 +68,12 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
         </Box>
       <Box p={"$5"}>
         <Button
+          title="Swiper"
+          onPress={() => navigation.navigate('Swiper')}
+        />
+        </Box>
+      <Box p={"$5"}>
+        <Button
           title="Messenger"
           onPress={() => navigation.navigate('Messenger')}
         />

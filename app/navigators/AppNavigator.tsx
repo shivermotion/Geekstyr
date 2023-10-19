@@ -34,12 +34,15 @@ import { colors } from "app/theme"
 export type AppStackParamList = {
   Welcome: undefined,
   LogIn: undefined
-	SignUp: undefined
-	VerifyAccount: undefined
-	Launch: undefined
-	ForgotPassword: undefined
-	Test: undefined
-	// IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
+  SignUp: undefined
+  VerifyAccount: undefined
+  Launch: undefined
+  ForgotPassword: undefined
+  Test: undefined
+  Match: undefined,
+  AvatarCreator: undefined,
+  AvatarViewer: { avatarUrl: string };
+  // IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
 }
 
 /**
@@ -67,13 +70,16 @@ const AppStack = observer(function AppStack() {
       <Stack.Screen name="VerifyAccount" component={Screens.VerifyAccountScreen} />
       <Stack.Screen name="SignUp" component={Screens.SignUpScreen} />
       <Stack.Screen name="ForgotPassword" component={Screens.ForgotPasswordScreen} />
+      <Stack.Screen name="Match" component={Screens.MatchScreen} />
+      <Stack.Screen name="AvatarCreator" component={Screens.AvatarCreator} />
+      <Stack.Screen name="AvatarViewer" component={Screens.AvatarViewer} />
       {/* ... other screens */}
     </Stack.Navigator>
   )
 })
 
 export interface NavigationProps
-  extends Partial<React.ComponentProps<typeof NavigationContainer>> {}
+  extends Partial<React.ComponentProps<typeof NavigationContainer>> { }
 
 export const AppNavigator = observer(function AppNavigator(props: NavigationProps) {
   const colorScheme = useColorScheme()

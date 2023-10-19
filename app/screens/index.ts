@@ -5,5 +5,7 @@ export * from "./LogInScreen"
 export * from "./VerifyAccountScreen"
 export * from "./SignUpScreen"
 export * from "./ForgotPasswordScreen"
-
 export * from "./TestScreen"
+export * from "./MatchScreen"
+export * from "./AvatarCreatorScreen"
+export * from "./AvatarViewerScreen"

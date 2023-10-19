@@ -42,6 +42,7 @@ export type AppStackParamList = {
   Match: undefined,
   AvatarCreator: undefined,
   AvatarViewer: { avatarUrl: string };
+  Swiper: undefined,
   // IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
 }
 
@@ -73,6 +74,7 @@ const AppStack = observer(function AppStack() {
       <Stack.Screen name="Match" component={Screens.MatchScreen} />
       <Stack.Screen name="AvatarCreator" component={Screens.AvatarCreator} />
       <Stack.Screen name="AvatarViewer" component={Screens.AvatarViewer} />
+      <Stack.Screen name="Swiper" component={Screens.SwiperScreen} />
       {/* ... other screens */}
     </Stack.Navigator>
   )

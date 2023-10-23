@@ -1,12 +1,10 @@
 import { observer } from "mobx-react-lite"
 import React, { FC } from "react"
-import { Button,  View, ViewStyle } from "react-native"
+import { Button,  ViewStyle } from "react-native"
 import { colors } from "../theme"
 import { AppStackScreenProps } from "app/navigators"
 import { useNavigation } from '@react-navigation/native';
 import { Box, ScrollView } from "@gluestack-ui/themed"
-import { SafeAreaProvider } from "react-native-safe-area-context"
-
 
 interface WelcomeScreenProps extends AppStackScreenProps<"Welcome"> { }
 

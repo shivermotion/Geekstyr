@@ -2,7 +2,8 @@ import React, { FC, useState } from "react"
 import { StyleSheet } from "react-native"
 import { observer } from "mobx-react-lite"
 import { Chat, MessageType } from '@flyerhq/react-native-chat-ui'
-import { View } from "@gluestack-ui/themed"
+import { View, KeyboardAvoidingView } from "@gluestack-ui/themed"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 // import { SafeAreaProvider } from "react-native-safe-area-context"
 
 
@@ -42,24 +43,27 @@ export const MessengerScreen: FC<MessengerScreenProps> = observer(function Messe
   return (
     // Remove this provider if already registered elsewhere
     // or you have React Navigation set up
-    // <SafeAreaProvider>
-    <View style={styles.container}> 
-      <Chat
-        messages={messages}
-        onSendPress={handleSendPress}
-        user={user}
-      />
+    <SafeAreaProvider>
+    <View style={styles.container} > 
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "height" : "height"}
+        style={{ flex: 1, zIndex: 999 }}
+      >
+        <Chat
+          messages={messages}
+          onSendPress={handleSendPress}
+          user={user}
+          />
+      </KeyboardAvoidingView>
    </View> 
-      // </SafeAreaProvider>
+    </SafeAreaProvider>
   )
 })
 
 const styles = StyleSheet.create({
 
     container: {
-
         flex: 1,
-      
     },
  
 });

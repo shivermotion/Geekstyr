@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-color-literals */
 import React, { FC } from "react"
 import { StyleSheet } from "react-native"
 import { observer } from "mobx-react-lite"

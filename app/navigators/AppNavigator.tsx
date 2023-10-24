@@ -44,6 +44,8 @@ export type AppStackParamList = {
   AvatarViewer: { avatarUrl: string };
   Swiper: undefined,
   Messenger: undefined;
+  Profile: undefined;
+  SeeMatches: undefined;
   // IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
 }
 
@@ -77,6 +79,8 @@ const AppStack = observer(function AppStack() {
       <Stack.Screen name="AvatarViewer" component={Screens.AvatarViewer} />
       <Stack.Screen name="Swiper" component={Screens.SwiperScreen} />
       <Stack.Screen name="Messenger" component={Screens.MessengerScreen} />
+      <Stack.Screen name="Profile" component={Screens.ProfileScreen} />
+      <Stack.Screen name="SeeMatches" component={Screens.SeeMatchesScreen} />
       {/* ... other screens */}
     </Stack.Navigator>
   )

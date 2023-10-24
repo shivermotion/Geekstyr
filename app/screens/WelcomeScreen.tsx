@@ -1,11 +1,10 @@
 import { observer } from "mobx-react-lite"
 import React, { FC } from "react"
-import { Button,  View, ViewStyle } from "react-native"
+import { Button,  ViewStyle } from "react-native"
 import { colors } from "../theme"
 import { AppStackScreenProps } from "app/navigators"
 import { useNavigation } from '@react-navigation/native';
-import { Box } from "@gluestack-ui/themed"
-
+import { Box, ScrollView } from "@gluestack-ui/themed"
 
 interface WelcomeScreenProps extends AppStackScreenProps<"Welcome"> { }
 
@@ -15,9 +14,9 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
   const navigation = useNavigation();
 
   return (
-    <View style={$container}>
 
-<Box p={"$5"} marginTop={"$20"}>
+    <ScrollView style={$container}>
+      <Box p={"$5"} >
         <Button
           title="Launch"
           onPress={() => navigation.navigate('Launch')}
@@ -50,7 +49,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
       </Box>
       <Box p={"$5"}>
         <Button
-          title="Match!"
+          title="Match Success!"
           onPress={() => navigation.navigate('Match')}
         />
         </Box>
@@ -78,15 +77,26 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
           onPress={() => navigation.navigate('Messenger')}
         />
         </Box>
-
-
-   
-    </View>
+      <Box p={"$5"}>
+        <Button
+          title="Profile"
+          onPress={() => navigation.navigate('Profile')}
+        />
+        </Box>
+      <Box p={"$5"}>
+        <Button
+          title="See Matches"
+          onPress={() => navigation.navigate('SeeMatches')}
+        />
+        </Box>
+      </ScrollView>
+     
   )
 })
 
 const $container: ViewStyle = {
   flex: 1,
+ marginVertical: 44,
   backgroundColor: colors.background,
 }
 

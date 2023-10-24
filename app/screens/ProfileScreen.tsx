@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { Text, StyleSheet, ScrollView } from 'react-native';
 import { AppStackScreenProps } from 'app/navigators';
 import { observer } from 'mobx-react-lite';
-import { Box, Icon, Avatar, AvatarBadge, AvatarFallbackText, Center, Image, AvatarImage } from '@gluestack-ui/themed';
+import { Box, Avatar, AvatarBadge, Center, Image, AvatarImage } from '@gluestack-ui/themed';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Font from 'expo-font';
 
@@ -67,11 +67,8 @@ export const ProfileScreen: FC<ProfileScreenProps> = observer(function ProfileSc
         <Box style={styles.preferenceBox}>
           <Text style={styles.preferenceText}>Preferences: Loves long walks, enjoys multiplayer games, prefers cats over dogs.</Text>
         </Box>
-         
-       
-    
       </ScrollView>
-     </LinearGradient>
+    </LinearGradient>
       
   );
 })

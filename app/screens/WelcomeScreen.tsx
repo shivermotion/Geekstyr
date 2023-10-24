@@ -16,7 +16,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
   return (
 
     <ScrollView style={$container}>
-      <Box p={"$5"} marginTop={"$20"}>
+      <Box p={"$5"} >
         <Button
           title="Launch"
           onPress={() => navigation.navigate('Launch')}
@@ -49,7 +49,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
       </Box>
       <Box p={"$5"}>
         <Button
-          title="Match!"
+          title="Match Success!"
           onPress={() => navigation.navigate('Match')}
         />
         </Box>
@@ -83,6 +83,12 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
           onPress={() => navigation.navigate('Profile')}
         />
         </Box>
+      <Box p={"$5"}>
+        <Button
+          title="See Matches"
+          onPress={() => navigation.navigate('SeeMatches')}
+        />
+        </Box>
       </ScrollView>
      
   )
@@ -90,8 +96,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
 
 const $container: ViewStyle = {
   flex: 1,
-  padding: 10,
-  margin: 20,
+ marginVertical: 44,
   backgroundColor: colors.background,
 }
 

@@ -6,6 +6,7 @@ import { Box, Button, ButtonText, Text, View } from "@gluestack-ui/themed"
 import LocationSelectionScreen from "./LocationSelectionScreen"
 import { AppStackScreenProps } from "app/navigators"
 import GameSystemSelectionScreen from "./GameSystemSelectionScreen"
+import AddFavoriteGamesScreen from "./AddFavoriteGames"
 
 interface OnboardingFlowScreenProps extends AppStackScreenProps<"LogIn"> {}
 
@@ -19,8 +20,10 @@ export const OnboardingFlowScreen: FC<OnboardingFlowScreenProps> = observer(
           <LocationSelectionScreen />
         ) : step === 1 ? (
           <GameSystemSelectionScreen />
+        ) : step === 2 ? (
+          <AddFavoriteGamesScreen />
         ) : (
-          "error"
+          <Text color="white">"error"</Text>
         )}
         <Box mt="$6">
           <Button

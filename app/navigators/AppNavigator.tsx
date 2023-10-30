@@ -46,6 +46,8 @@ export type AppStackParamList = {
   Messenger: undefined;
   Profile: undefined;
   SeeMatches: undefined;
+  OnboardingFlow: undefined;
+  MyAccount: undefined;
   // IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
 }
 
@@ -81,6 +83,8 @@ const AppStack = observer(function AppStack() {
       <Stack.Screen name="Messenger" component={Screens.MessengerScreen} />
       <Stack.Screen name="Profile" component={Screens.ProfileScreen} />
       <Stack.Screen name="SeeMatches" component={Screens.SeeMatchesScreen} />
+      <Stack.Screen name="OnboardingFlow" component={Screens.OnboardingFlowScreen} />
+      <Stack.Screen name="MyAccount" component={Screens.MyAccountScreen} />
       {/* ... other screens */}
     </Stack.Navigator>
   )

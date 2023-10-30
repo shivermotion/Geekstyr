@@ -82,7 +82,7 @@ export const SeeMatchesScreen: FC<SeeMatchesScreenProps> = observer(function See
 
   return (
     <Box py="$10">
-      <Heading size="xl" p="$4" pb="$3">
+      <Heading size="xl"  pb="$3">
         Matches
       </Heading>
       <FlatList

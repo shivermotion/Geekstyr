@@ -89,6 +89,18 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
           onPress={() => navigation.navigate('SeeMatches')}
         />
         </Box>
+      <Box p={"$5"}>
+        <Button
+          title="Onboarding Flow"
+          onPress={() => navigation.navigate('OnboardingFlow')}
+        />
+      </Box>
+      <Box p={"$5"}>
+        <Button
+          title="My Account"
+          onPress={() => navigation.navigate('MyAccount')}
+        />
+        </Box>
       </ScrollView>
      
   )
